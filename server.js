@@ -70,9 +70,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/articleName',function(req,res){
-    var articleName=req.params.rticleName;
-      res.send(createtemplate(articles[articleName]));
-
+ app.get('/article-one',function(req,res){
+    res.send(article(article-one)); 
 });
 app.get('/article-two',function(req,res){
     res.sendFile(path.join(__dirname, 'ui', 'article-two.html')); 
