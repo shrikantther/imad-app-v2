@@ -10,6 +10,6 @@ button.onclick =function(){
     //render of variable in span
     counter=counter+1;
     var span=document.getElementById("count");
-    swpan.innerHTML=counter.toString();
+    span.innerHTML=counter.toString();
     
 }
