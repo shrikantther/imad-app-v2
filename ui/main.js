@@ -2,8 +2,7 @@
 var button=document.getElementById('counter');
 //var counter=0;
 //submit name
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
+
 var submit=document.getElementById('submit_btn');
  
 button.onclick =function(){
@@ -35,6 +34,8 @@ button.onclick =function(){
     };
     //render of variable in span
 //make request
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
 request.open('GET','http://shrikantther.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 };
