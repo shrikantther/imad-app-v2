@@ -20,7 +20,7 @@ button.onclick =function(){
     };
     //render of variable in span
 //make request
-request.open("GET","http://shrikantther@ssh.imad.hasura-app.io/counter",true);
+request.open('GET','http://shrikantther@ssh.imad.hasura-app.io/counter',true);
 request.send(null);
     
 };
