@@ -99,7 +99,7 @@ app.get('/counter',function(req,res){
       //     res.send(JSON.stringify(result));
        //}
     //});
-});
+//});
 
 //app.get('/articleName',function(req,res){
 // app.get('/article-one',function(req,res){
