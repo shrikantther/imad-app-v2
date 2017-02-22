@@ -30,7 +30,7 @@ app.use(morgan('combined'));
   `    
  }
 };
-
+*/
 
 
 function createtemplate(data){
@@ -39,12 +39,14 @@ function createtemplate(data){
     var heading=data.heading;
     var content=data.content;
 
-var htmltemplate=`
+var htmlTemplate=`
 <html>
-<head> <title>
+<head> 
+<title>
 ${title}
 </title>
-<style>
+<meta name="viewport" content="width-device-width, initial-scale=1"/>
+/*<style>
     .container{
          max-width: 800px;
     margin: auto;
@@ -54,7 +56,8 @@ ${title}
     padding-right: 20px;
     }
     
-</style>
+</style>*/
+<link href="/ui/style.css" rel="stylesheet"/>
 
 </head>
 
@@ -66,9 +69,9 @@ ${title}
     </div>
     </hr>
     <h3>
-        ${heading}${date}
+        ${heading}
     </h3>
-    
+    <div> ${date.toDateString()} </div>
     <div>${content}</div>
     </div>
 </body>
@@ -76,7 +79,7 @@ ${title}
 
 `;
 return htmltemplate;
-}*/
+}
 
 
 app.get('/', function (req, res) {
