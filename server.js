@@ -45,8 +45,8 @@ var htmlTemplate=`
 <title>
 ${title}
 </title>
-<meta name="viewport" content="width-device-width, initial-scale=1"/>
-/*<style>
+//<meta name="viewport" content="width-device-width, initial-scale=1"/>
+<style>
     .container{
          max-width: 800px;
     margin: auto;
@@ -56,8 +56,8 @@ ${title}
     padding-right: 20px;
     }
     
-</style>*/
-<link href="/ui/style.css" rel="stylesheet"/>
+</style>
+//<link href="/ui/style.css" rel="stylesheet"/>
 
 </head>
 
