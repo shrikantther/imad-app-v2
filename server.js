@@ -101,7 +101,7 @@ app.get('/test-db',function(req,res){
     });
 });
 
-app.get('/article/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
 // app.get('/article-one',function(req,res){
   //  var articleName=req.params.articleName;
    // var articleData=
