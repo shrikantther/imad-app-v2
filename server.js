@@ -99,9 +99,19 @@ app.get('/test-db',function(req,res){
            res.statues(500).send(err.toString());
            
        }else{
-           res.send(JSON.stringify(result.rows));
+           if(result.rows.length===0){
+               res.status(404).send('article not found');
+           }
+           else
+           {
+              var articleData=result.Rows[0];
+              res.send(createTemplate(articleData));
+
+           }
        }
     });
+               res.send(createTemplate(articleData));
+
 });
 
 app.get('/articles/:articleName',function(req,res){
