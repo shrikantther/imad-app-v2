@@ -15,6 +15,10 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret:'someRandomSecretValue',
+    cookie:{maxAge: 1000*60*60*24*30 }
+}));
 function hash(input,salt){
     var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
 
@@ -67,22 +71,6 @@ app.post('/login',function(req,res){
         }
     });
 });
-/*var articles={
- 'article-one' : {
-    title:'article one',
-    heading:"article-one",
-    date:"5 sept",
- content:`
-     <p>
-     welcome welcome welcome welcome welcome welcome welcome 
-     </p>
-     <p>
-     welcome welcome welcome welcome welcome welcome welcome welcome 
-     </p>
-  `    
- }
-};
-*/
 
 
 function createtemplate(data){
@@ -167,9 +155,7 @@ app.get('/test-db',function(req,res){
 });
 
 app.get('/articles/:articleName',function(req,res){
-// app.get('/article-one',function(req,res){
-  //  var articleName=req.params.articleName;
-   // var articleData=
+
    pool.query("SELECT * FROM article where title='"+req.params.articleName+"'",function(err,result){
       if(err)
       {
