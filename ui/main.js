@@ -14,12 +14,12 @@ submit.onclick =function(){
            {
               // var names=['name1','name2','name3','name4'];
              
-  console.log("user logged in");
-  alert("logged in successfully");
+             console.log('user logged in');
+  alert('logged in successfully');
            }else if(request.status===403){
-              alert("username/password is incorrect") ;
+              alert('username/password is incorrect') ;
            }else if(request.status===500){
-               alert("Something went wrong on the server");
+               alert('Something went wrong on the server');
            }
            
        }
