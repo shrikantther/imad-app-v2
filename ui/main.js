@@ -1,8 +1,8 @@
-var button=document.getElementById('counter');
+//var button=document.getElementById('counter');
 
 var submit=document.getElementById('submit_btn');
  
-button.onclick =function(){
+submit.onclick =function(){
     
     //request
     var request=new XMLHttpRequest();
